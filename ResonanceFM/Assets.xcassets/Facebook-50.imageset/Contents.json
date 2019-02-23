@@ -1,0 +1,10 @@
+ $title );
+
+				if ( 'update' === $install_type ) {
+					$skin_args['plugin'] = $this->plugins[ $slug ]['file_path'];
+					$skin                = new Plugin_Upgrader_Skin( $skin_args );
+				} else {
+					$skin = new Plugin_Installer_Skin( $skin_args );
+				}
+
+				// Create a new instance of Plugin_Upgrader.
